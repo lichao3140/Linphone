@@ -12,15 +12,12 @@ import android.view.KeyEvent;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
-
 import com.quhwa.adapter.MainPagerAdapter;
 import com.quhwa.presenter.PagerPresenter;
 import com.quhwa.utils.MyAnimation;
 import com.quhwa.view.IPagerView;
 import com.quhwa.widget.ViewPagerScroller;
-
 import org.linphone.R;
-
 import java.util.List;
 
 /**

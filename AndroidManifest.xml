@@ -103,6 +103,8 @@
 			android:value="1920" />
 
 		<activity android:name="com.quhwa.activity.MainActivity" />
+		<activity android:name="com.quhwa.activity.ProduceDetailActivity" />
+		<activity android:name="com.quhwa.activity.ShowSmartFamilyProduceActivity" />
 
 		<activity android:name="org.linphone.LinphoneActivity"
 		    android:theme="@style/NoTitle"

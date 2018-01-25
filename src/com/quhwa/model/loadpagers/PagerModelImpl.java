@@ -1,5 +1,14 @@
 package com.quhwa.model.loadpagers;
 
+import android.support.v4.app.Fragment;
+
+import com.quhwa.fragment.LifeCircleFragment;
+import com.quhwa.fragment.SmartAreaFragment;
+import com.quhwa.fragment.SmartFamilyFragment;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 加载Fragment页面数据
  *
@@ -9,12 +18,12 @@ package com.quhwa.model.loadpagers;
 public class PagerModelImpl implements IPagerModel{
 	@Override
 	public void loadPagersData(PagerOnLoadListener pagerOnLoadListener) {
-//		List<Fragment> fragments = new ArrayList<Fragment>();
-//		fragments.add(new SmartAreaFragment_());
-//		fragments.add(new LifeCircleFragment());
-//		fragments.add(new SmartFamilyFragment());
-//		fragments.add(new MyFragment());
-//		pagerOnLoadListener.onComplete(fragments);
+		List<Fragment> fragments = new ArrayList<Fragment>();
+		fragments.add(new SmartAreaFragment());
+		fragments.add(new LifeCircleFragment());
+		fragments.add(new SmartFamilyFragment());
+		//fragments.add(new MyFragment());
+		pagerOnLoadListener.onComplete(fragments);
 	}
 
 }
