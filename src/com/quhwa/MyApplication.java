@@ -9,16 +9,18 @@ import android.support.multidex.MultiDex;
  */
 
 public class MyApplication extends Application {
-    public static MyApplication application;
+    public static MyApplication instance;
+    public static boolean debugMode = false;
 
     public static MyApplication getInstance() {
-        return application;
+        return instance;
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        application = this;
+        instance = this;
+        setDebug(true);
     }
 
     @Override
@@ -28,4 +30,18 @@ public class MyApplication extends Application {
         MultiDex.install(this);
     }
 
+    /**
+     * 设置debug状态
+     * @param debugMode
+     */
+    public void setDebug(boolean debugMode){
+        this.debugMode = debugMode;
+    }
+    /**
+     * 返回debug状态
+     * @return true：处于调试状态，日志打开   false：处于未调试状态，日志未打开
+     */
+    public static boolean getDebug(){
+        return debugMode;
+    }
 }
