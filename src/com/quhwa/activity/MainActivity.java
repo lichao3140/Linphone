@@ -12,12 +12,15 @@ import android.view.KeyEvent;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+
 import com.quhwa.adapter.MainPagerAdapter;
 import com.quhwa.presenter.PagerPresenter;
 import com.quhwa.utils.MyAnimation;
 import com.quhwa.view.IPagerView;
 import com.quhwa.widget.ViewPagerScroller;
+
 import org.linphone.R;
+
 import java.util.List;
 
 /**
@@ -94,7 +97,6 @@ public class MainActivity extends BaseActivity implements IPagerView {
 					break;
 				}
 				MyAnimation.scaleAnimation(currentSelect);
-//				MyAnimation.alphaAnimation(vp_content);
 			}
 		});
 		//监听ViewPager页面发送改变
@@ -104,19 +106,15 @@ public class MainActivity extends BaseActivity implements IPagerView {
 				switch (position) {
 				case 0:
 					rbSmartArea.setChecked(true);
-//					rg_tab_menu.check(R.id.rb_tab_menu_smart_area);
 					break;
 				case 1:
 					rbLifeCircle.setChecked(true);
-//					rg_tab_menu.check(R.id.rb_tab_menu_life_circle);
 					break;
 				case 2:
 					rbSmartFamily.setChecked(true);
-//					rg_tab_menu.check(R.id.rb_tab_menu_smart_family);
 					break;
 				case 3:
 					rbMy.setChecked(true);
-//					rg_tab_menu.check(R.id.rb_tab_menu_own);
 					break;
 				}
 			}
@@ -151,6 +149,5 @@ public class MainActivity extends BaseActivity implements IPagerView {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		//PhoneManager.stopPlayRingtone();
 	}
 }
