@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
     <color name="main_color">#1196DB</color>
     <color name="default_tab_menu_text_color">#999999</color>
     <color name="tab_menu_background">#F1F1F1</color>

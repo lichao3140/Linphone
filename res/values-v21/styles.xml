@@ -15,6 +15,9 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/app_base_color</item>
+        <item name="colorAccent">@color/app_base_color</item>
     </style>
     
     <style name="loading_dialog" parent="android:style/Theme.Dialog">

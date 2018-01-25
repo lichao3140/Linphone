@@ -18,18 +18,18 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 package org.linphone;
 
-import static android.content.Intent.ACTION_MAIN;
-
-import org.linphone.assistant.RemoteProvisioningActivity;
-import org.linphone.tutorials.TutorialLauncherActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 
-import org.linphone.R;
+import com.quhwa.activity.MainActivity;
+
+import org.linphone.assistant.RemoteProvisioningActivity;
+import org.linphone.tutorials.TutorialLauncherActivity;
+
+import static android.content.Intent.ACTION_MAIN;
 
 /**
  * 
@@ -72,7 +72,8 @@ public class LinphoneLauncherActivity extends Activity {
 		} else if (getResources().getBoolean(R.bool.display_sms_remote_provisioning_activity) && LinphonePreferences.instance().isFirstRemoteProvisioning()) {
 			classToStart = RemoteProvisioningActivity.class;
 		} else {
-			classToStart = LinphoneActivity.class;
+			//classToStart = LinphoneActivity.class;
+			classToStart = MainActivity.class;
 		}
 		
 		mHandler.postDelayed(new Runnable() {

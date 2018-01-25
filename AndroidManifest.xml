@@ -94,12 +94,7 @@
 		</activity>
 
 		<activity android:name="com.quhwa.activity.MainActivity"
-			android:theme="@style/NoTitle"
-			android:screenOrientation="behind"
-			android:launchMode="singleTask">
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-			</intent-filter>
+			android:theme="@style/AppTheme" >
 		</activity>
 
 		<activity android:name="org.linphone.LinphoneActivity"
