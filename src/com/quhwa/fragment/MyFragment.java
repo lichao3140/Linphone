@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.quhwa.MyApplication;
 import com.quhwa.activity.LoginActivity;
+import com.quhwa.activity.UserInfoActivity;
 import com.quhwa.bean.UserInfo;
 import com.quhwa.db.Table;
 import com.quhwa.utils.Code;
@@ -84,8 +85,8 @@ public class MyFragment extends Fragment implements OnClickListener{
 	}
 	
 	private void startToUserInfoActivity() {
-//		Intent intent = new Intent(getActivity(),UserInfoActivity.class);
-//		startActivity(intent);
+		Intent intent = new Intent(getActivity(), UserInfoActivity.class);
+		startActivity(intent);
 	}
 
 	@Override
