@@ -105,6 +105,8 @@
 		<activity android:name="com.quhwa.activity.MainActivity" />
 		<activity android:name="com.quhwa.activity.ProduceDetailActivity" />
 		<activity android:name="com.quhwa.activity.ShowSmartFamilyProduceActivity" />
+		<activity android:name="com.quhwa.activity.LoginActivity" />
+		<activity android:name="com.quhwa.activity.RegisterActivity" />
 
 		<activity android:name="org.linphone.LinphoneActivity"
 		    android:theme="@style/NoTitle"
