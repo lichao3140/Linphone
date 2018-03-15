@@ -72,7 +72,7 @@ public class LinphoneLauncherActivity extends Activity {
 		} else if (getResources().getBoolean(R.bool.display_sms_remote_provisioning_activity) && LinphonePreferences.instance().isFirstRemoteProvisioning()) {
 			classToStart = RemoteProvisioningActivity.class;
 		} else {
-			//classToStart = LinphoneActivity.class;
+//			classToStart = LinphoneActivity.class;
 			classToStart = MainActivity.class;
 		}
 		

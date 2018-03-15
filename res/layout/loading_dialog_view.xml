@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="20dp" >
 
-    <com.quhwa.cloudintercom.widget.LVCircularRing
+    <com.quhwa.widget.LVCircularRing
         android:id="@+id/lv_circularring"
         android:layout_width="50dp"
         android:layout_height="50dp" />

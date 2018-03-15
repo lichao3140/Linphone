@@ -18,24 +18,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 package org.linphone;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
-import org.linphone.compatibility.Compatibility;
-import org.linphone.core.LinphoneAddress;
-import org.linphone.core.LinphoneCall;
-import org.linphone.core.LinphoneCall.State;
-import org.linphone.core.LinphoneCore;
-import org.linphone.core.LinphoneCore.GlobalState;
-import org.linphone.core.LinphoneCore.RegistrationState;
-import org.linphone.core.LinphoneCoreException;
-import org.linphone.core.LinphoneCoreFactory;
-import org.linphone.core.LinphoneCoreListenerBase;
-import org.linphone.core.LinphoneProxyConfig;
-import org.linphone.mediastream.Log;
-import org.linphone.mediastream.Version;
-import org.linphone.ui.LinphoneOverlay;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -58,7 +40,23 @@ import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.view.WindowManager;
 
-import org.linphone.R;
+import org.linphone.compatibility.Compatibility;
+import org.linphone.core.LinphoneAddress;
+import org.linphone.core.LinphoneCall;
+import org.linphone.core.LinphoneCall.State;
+import org.linphone.core.LinphoneCore;
+import org.linphone.core.LinphoneCore.GlobalState;
+import org.linphone.core.LinphoneCore.RegistrationState;
+import org.linphone.core.LinphoneCoreException;
+import org.linphone.core.LinphoneCoreFactory;
+import org.linphone.core.LinphoneCoreListenerBase;
+import org.linphone.core.LinphoneProxyConfig;
+import org.linphone.mediastream.Log;
+import org.linphone.mediastream.Version;
+import org.linphone.ui.LinphoneOverlay;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * 
@@ -240,16 +238,20 @@ public final class LinphoneService extends Service {
 //					Log.i("Service not ready, discarding registration state change to ",state.toString());
 //					return;
 //				}
+				android.util.Log.e("sip注册","-------------注册---------------");
 				if (!mDisableRegistrationStatus) {
 					if (displayServiceNotification() && state == RegistrationState.RegistrationOk && LinphoneManager.getLc().getDefaultProxyConfig() != null && LinphoneManager.getLc().getDefaultProxyConfig().isRegistered()) {
+						android.util.Log.e("sip注册状态","成功");
 						sendNotification(IC_LEVEL_ORANGE, R.string.notification_registered);
 					}
 			
 					if (displayServiceNotification() && (state == RegistrationState.RegistrationFailed || state == RegistrationState.RegistrationCleared) && (LinphoneManager.getLc().getDefaultProxyConfig() == null || !LinphoneManager.getLc().getDefaultProxyConfig().isRegistered())) {
+						android.util.Log.e("sip注册状态","失败");
 						sendNotification(IC_LEVEL_ORANGE, R.string.notification_register_failure);
 					}
 					
 					if (displayServiceNotification() && state == RegistrationState.RegistrationNone) {
+						android.util.Log.e("sip注册状态","null");
 						sendNotification(IC_LEVEL_ORANGE, R.string.notification_started);
 					}
 				}

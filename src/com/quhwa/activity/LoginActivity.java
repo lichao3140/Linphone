@@ -75,7 +75,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener, ILog
 		loginToServer(userInfo);
 	}
 	private void loginToServer(UserInfo userInfo) {
-		new LoginPresenter(LoginActivity.this, userInfo).login();
+		new LoginPresenter(LoginActivity.this, userInfo).login(this);
 	}
 	/**
 	 * 启动注册界面
